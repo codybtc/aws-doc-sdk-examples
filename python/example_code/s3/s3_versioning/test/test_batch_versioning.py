@@ -274,7 +274,7 @@ def test_prepare_for_cleanup_failure(make_stubber, make_unique_name, fail_at):
                 {"Error": {"Code": "TestException", "Message": "hi"}}, "test-op"
             )
         )
-    elif fail_at == "list_versions":
+    elif fail_at == "list_versions":j
         s3_stubber.stub_list_object_versions(
             bucket_name, f"{obj_prefix}stanza", error_code="TestException"
         )
